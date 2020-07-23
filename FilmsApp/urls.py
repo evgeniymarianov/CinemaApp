@@ -23,13 +23,14 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('i18n/', include('django.conf.urls.i18n')),
+    path("", include("movies.urls")),
+    #path('i18n/', include('django.conf.urls.i18n')),
 ]
 
-urlpatterns += i18n_patterns(
-    path('accounts/', include('allauth.urls')),
-    path("", include("movies.urls")),
-)
+#urlpatterns += i18n_patterns(
+    #path('accounts/', include('allauth.urls')),
+    #path("", include("movies.urls")),
+#)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
