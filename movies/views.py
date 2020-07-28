@@ -10,7 +10,6 @@ class MoviesView(ListView):
     #template_name = "movies/movies.html"
 
 
-
 class MovieDetailView(DetailView):
     """Полное описание фильма"""
     model = Movie
